@@ -42,11 +42,15 @@ h1 {
 
 footer div {
     padding: 1rem;
-    background-color: lightgreen;
 }
 
 .flex {
     display: flex;
+}
+
+.overflow-hidden {
+    overflow-x: hidden;
+    object-fit: cover;
 }
 
 .list-none {
@@ -55,11 +59,6 @@ footer div {
 
 .mt-2 {
     margin-top: 2rem;
-}
-
-.img-800 {
-    width: 800px;
-    height: 800px;
 }
 
 .center {
@@ -79,9 +78,4 @@ footer div {
     float: left;
     clear: left;
     margin-right: 10px;
-}
-
-.img-200 {
-    width: 200px;
-    height: 200px;
 }
