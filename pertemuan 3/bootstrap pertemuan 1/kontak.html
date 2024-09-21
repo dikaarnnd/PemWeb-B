@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Kontak</title>
+</head>
+<body>
+    <nav class="nav">
+        <a class="nav-link active" aria-current="page" href="/dashboard.html">Dashboard</a>
+        <a class="nav-link" href="/kontak.html">Kontak</a>
+        <a class="nav-link" href="/about.html">About</a>
+    </nav>
+    <hr>
+    <form class="border">
+        <h1>Formulir Kontak:</h1>
+        <ul>
+            <li class="pb">
+                Nama: <input type="text" name="nama" placeholder="Masukkan Nama">
+            </li>
+            <li class="pb">
+                Kewarganegaraan:
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="WNI">
+                    <label class="form-check-label" for="WNI">
+                        WNI
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Asing">
+                    <label class="form-check-label" for="Asing">
+                        Asing
+                    </label>
+                </div>
+            </li>
+            <li class="pb">
+                Layanan:
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="website">
+                    <label class="form-check-label" for="website">
+                        Website
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="hosting">
+                    <label class="form-check-label" for="hosting">
+                        Hosting
+                    </label>
+                </div>
+            </li>
+        </ul>
+        <button type="submit" class="btn btn-primary">Kirim</button>
+        <button type="reset" class="btn btn-danger">Hapus</button>
+    </form>
+</body>
+</html>
