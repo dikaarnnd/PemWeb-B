@@ -91,12 +91,11 @@
                     $today = new DateTime(); // Tanggal hari ini
                     $umur = $today->diff($date); // Hitung selisih
 
-                    // Tampilkan hasil umur dalam tahun, bulan, dan hari
                     echo 'berarti umur Anda sudah ' . $umur->y . ' tahun ' . $umur->m . ' bulan ' . $umur->d . ' hari.';
                 ?>
             </li>
         </ul>
-        <button type="submit" name="submit" value="" class="btn btn-primary">Konfirmasi</button>
+        <button type="submit" name="konfirmasi" class="btn btn-primary">Konfirmasi</button>
     </div> <br>
 </body>
 </html>
