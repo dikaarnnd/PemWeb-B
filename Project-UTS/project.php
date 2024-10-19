@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>About Me</title>
+    <title>My Project</title>
 </head>
 <body>
     <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika">
@@ -19,9 +19,9 @@
             <nav class="bg-yellow-400 text-white h-full flex flex-col justify-center items-center">
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
                 <a href="./home.php" class="mb-3 text-black font-bold hover:text-white">HOME</a>
-                <a href="./about.php" class="mb-3 text-white font-bold hover:text-white">ABOUT ME</a>
+                <a href="./about.php" class="mb-3 text-black font-bold hover:text-white">ABOUT ME</a>
                 <a href="./skills.php" class="mb-3 text-black font-bold hover:text-white">SKILL</a>
-                <a href="./project.php" class="mb-3 text-black font-bold hover:text-white">MY PROJECT</a>
+                <a href="./project.php" class="mb-3 text-white font-bold hover:text-white">MY PROJECT</a>
                 <a href="./contact.php" class="mb-3 text-black font-bold hover:text-white">CONTACT</a>
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
             </nav>
