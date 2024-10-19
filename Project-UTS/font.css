@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "londrina";
+  src: url('./fonts/LondrinaSketch-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "signika";
+  src: url('./fonts/SignikaNegative-Regular.ttf') format('truetype');
+}
+
+.londrina {
+  font-family: "londrina";
+}
+.signika {
+  font-family: 'signika';
+}
