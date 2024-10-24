@@ -28,7 +28,7 @@
         $result1 = $conn->query($sql1);
         $sql2 = "SELECT namadepan FROM biodata WHERE id=1";
         $result2 = $conn->query($sql2);
-        $sql3 = "SELECT skillname FROM skill";
+        $sql3 = "SELECT skillname FROM skill LIMIT 3";
         $result3 = $conn->query($sql3);
 
         $link = '';

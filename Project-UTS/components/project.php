@@ -40,7 +40,7 @@
         $conn->close();
     ?>
     <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika">
-        <div class="flex flex-col basis-1/5">
+        <div class="flex flex-col basis-1/6">
             <div class="">
                 <img src="<?php echo $link;?>" class="w-full"/>
             </div>
@@ -54,7 +54,7 @@
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
             </nav>
         </div>
-        <div class="flex flex-col basis-4/5 bg-slate-200 p-7">
+        <div class="flex flex-col basis-5/6 bg-slate-200 p-7">
             <div class="border-1 border-slate-500 py-2 text-6xl w-full mb-4 text-center">
                 <h1 class="rubikmono">MY PROJECT</h1>
             </div>

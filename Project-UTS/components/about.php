@@ -28,11 +28,77 @@
         $result1 = $conn->query($sql1);
         $sql2 = "SELECT txt FROM text WHERE nametext='about'";
         $result2 = $conn->query($sql2);
+        $sql3 = "SELECT link FROM content WHERE namafoto='webimg'";
+        $result3 = $conn->query($sql3);
+        $sql4 = "SELECT link FROM content WHERE namafoto='dbimg'";
+        $result4 = $conn->query($sql4);
+        $sql5 = "SELECT link FROM content WHERE namafoto='iotimg'";
+        $result5 = $conn->query($sql5);
+        $sql6 = "SELECT skillname FROM skill WHERE id=4";
+        $result6 = $conn->query($sql6);
+        $sql7 = "SELECT skillname FROM skill WHERE id=5";
+        $result7 = $conn->query($sql7);
+        $sql8 = "SELECT skillname FROM skill WHERE id=6";
+        $result8 = $conn->query($sql8);
+        $sql9 = "SELECT CONCAT(namadepan, ' ', namabelakang) AS nama_lengkap FROM biodata WHERE id=1";
+        $result9 = $conn->query($sql9);
+        // $sql10 = "SELECT namadepan, namabelakang FROM biodata WHERE id=1";
+        // $result10 = $conn->query($sql10);
 
-        $link = '';
+        $link1 = '';
         if ($result1->num_rows > 0) {
             while($row = $result1->fetch_assoc()) {
-                $link = $row["link"];
+                $link1 = $row["link"];
+            }
+        } else {
+            $link1 = "default.jpg";
+        }
+
+        $link2 = '';
+        if ($result3->num_rows > 0) {
+            while($row = $result3->fetch_assoc()) {
+                $link2 = $row["link"];
+            }
+        } else {
+            $link2 = "default.jpg";
+        }
+        $link3 = '';
+        if ($result4->num_rows > 0) {
+            while($row = $result4->fetch_assoc()) {
+                $link3 = $row["link"];
+            }
+        } else {
+            $link3 = "default.jpg";
+        }
+        $link4 = '';
+        if ($result5->num_rows > 0) {
+            while($row = $result5->fetch_assoc()) {
+                $link4 = $row["link"];
+            }
+        } else {
+            $link4 = "default.jpg";
+        }
+
+        $skill1 = '';
+        if ($result6->num_rows > 0) {
+            while($row = $result6->fetch_assoc()) {
+                $skill1 = $row["skillname"];
+            }
+        } else {
+            $link = "default.jpg";
+        }
+        $skill2 = '';
+        if ($result7->num_rows > 0) {
+            while($row = $result7->fetch_assoc()) {
+                $skill2 = $row["skillname"];
+            }
+        } else {
+            $link = "default.jpg";
+        }
+        $skill3 = '';
+        if ($result8->num_rows > 0) {
+            while($row = $result8->fetch_assoc()) {
+                $skill3 = $row["skillname"];
             }
         } else {
             $link = "default.jpg";
@@ -47,12 +113,21 @@
             $link = "default.jpg";
         }
 
+        $nama = '';
+        if ($result9->num_rows > 0) {
+            while($row = $result9->fetch_assoc()) {
+                $nama = $row["nama_lengkap"];
+            }
+        } else {
+            $link = "default.jpg";
+        }
+
         $conn->close();
     ?>
     <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika">
-        <div class="flex flex-col basis-1/5">
+        <div class="flex flex-col basis-1/6">
             <div class="">
-                <img src="<?php echo $link; ?>" class="w-full"/>
+                <img src="<?php echo $link1; ?>" class="w-full"/>
             </div>
             <nav class="bg-yellow-400 text-white h-full flex flex-col justify-center items-center">
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
@@ -64,32 +139,29 @@
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
             </nav>
         </div>
-        <div class="flex flex-col basis-4/5 bg-slate-200 p-7">
+        <div class="flex flex-col basis-5/6 bg-slate-200 p-7">
             <div class="border-1 border-slate-500 py-2 text-6xl w-full mb-4 text-center">
                 <h1 class="rubikmono">ABOUT ME</h1>
             </div>
             <div class="mb-4">
-                <h2 class="text-4xl text-left">I'm <span class=" font-bold">Dika Arnanda Putra.</span></h2>
-                <p class="text-lg text-justify"><?php echo $teks?></p>
+                <h2 class="text-4xl text-left pt-1">I'm <span class=" font-bold"><?php echo $nama?>.</span></h2>
+                <p class="text-lg text-justify pt-2"><?php echo $teks?></p>
             </div>
-            <div class="mt-2 mb-3">
+            <div class="mt-4 mb-3">
                 <h2 class="text-2xl text-center font-bold">What I Do?</h2>
             </div>
             <div class="flex justify-evenly">
-                <div class="basis-1/3 place-items-center bg-yellow-300 m-2">
-                    <img src="./images/iwak_200.jpeg" class="w-1/3"/>
-                    <h5 class="text-center font-bold pt-1">Web Design</h5>
-                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="basis-1/3 place-items-center m-2">
+                    <img src="<?php echo $link2?>" class="w-1/3"/>
+                    <h5 class="text-center font-bold pt-2"><?php echo $skill1?></h5>
                 </div>
-                <div class="basis-1/3 place-items-center bg-yellow-300 m-2">
-                    <img src="./images/iwak_200.jpeg" class="w-1/3"/>
-                    <h5 class="text-center font-bold pt-1">Web Design</h5>
-                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="basis-1/3 place-items-center m-2">
+                    <img src="<?php echo $link3?>" class="w-1/3"/>
+                    <h5 class="text-center font-bold pt-2"><?php echo $skill2?></h5>
                 </div>
-                <div class="basis-1/3 place-items-center bg-yellow-300 m-2">
-                    <img src="./images/iwak_200.jpeg" class="w-1/3"/>
-                    <h5 class="text-center font-bold pt-1">Web Design</h5>
-                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="basis-1/3 place-items-center m-2">
+                    <img src="<?php echo $link4?>" class="w-1/3"/>
+                    <h5 class="text-center font-bold pt-2"><?php echo $skill3?></h5>
                 </div>
             </div>
         </div>
