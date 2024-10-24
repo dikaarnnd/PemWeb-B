@@ -42,8 +42,6 @@
         $result8 = $conn->query($sql8);
         $sql9 = "SELECT CONCAT(namadepan, ' ', namabelakang) AS nama_lengkap FROM biodata WHERE id=1";
         $result9 = $conn->query($sql9);
-        // $sql10 = "SELECT namadepan, namabelakang FROM biodata WHERE id=1";
-        // $result10 = $conn->query($sql10);
 
         $link1 = '';
         if ($result1->num_rows > 0) {
