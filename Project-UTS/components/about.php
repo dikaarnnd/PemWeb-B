@@ -110,10 +110,10 @@
 
         $conn->close();
     ?>
-    <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika">
-        <div class="flex flex-col basis-1/6 bg-yellow-400">
+    <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika bg-slate-200">
+        <div class="flex flex-col basis-1/6 bg-slate-500 rounded-r-3xl">
             <div class="flex justify-center items-center w-full p-4">
-                <img src="<?php echo $link1; ?>" class="object-cover h-auto w-auto aspect-square rounded-full border border-black outline-dashed bg-orange-400"/>
+                <img src="<?php echo $link1; ?>" class="object-cover h-auto w-auto aspect-square rounded-full border border-black outline-dashed bg-gray-400"/>
             </div>
             <nav class=" h-full flex flex-col justify-center items-center">
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
@@ -125,7 +125,7 @@
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
             </nav>
         </div>
-        <div class="flex flex-col basis-5/6 bg-slate-200 p-7">
+        <div class="flex flex-col basis-5/6 p-7">
             <div class="border-1 border-slate-500 py-2 text-6xl w-full mb-4 text-center">
                 <h1 class="rubikmono">ABOUT ME</h1>
             </div>

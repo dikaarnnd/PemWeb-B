@@ -65,6 +65,9 @@
         $result18 = $conn->query($sql18);
         $sql19 = "SELECT link FROM lang WHERE namabhs='tailwind'";
         $result19 = $conn->query($sql19);
+        // teks
+        $sql20 = "SELECT txt FROM text WHERE nametext='skill'";
+        $result20 = $conn->query($sql20);
 
         // foto
         $foto = '';
@@ -183,13 +186,20 @@
                 $tailwinddocs = $row["link"];
             }
         }
+        // teks
+        $teks = '';
+        if ($result20->num_rows > 0) {
+            while($row = $result20->fetch_assoc()) {
+                $teks = $row["txt"];
+            }
+        }
 
         $conn->close();
     ?>
-    <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika">
-        <div class="flex flex-col basis-1/6 bg-yellow-400">
+    <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika bg-slate-200">
+        <div class="flex flex-col basis-1/6 bg-slate-500 rounded-r-3xl">
             <div class="flex justify-center items-center w-full p-4">
-                <img src="<?php echo $foto;?>" class="object-cover h-auto w-auto aspect-square rounded-full outline-dashed bg-orange-400"/>
+                <img src="<?php echo $foto;?>" class="object-cover h-auto w-auto aspect-square rounded-full outline-dashed bg-gray-400"/>
             </div>
             <nav class=" h-full flex flex-col justify-center items-center">
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
@@ -201,11 +211,14 @@
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
             </nav>
         </div>
-        <div class="flex flex-col basis-5/6 bg-slate-200 p-7">
+        <div class="flex flex-col basis-5/6 p-7">
             <div class="border-1 border-slate-500 py-2 text-6xl w-full mb-4 text-center">
                 <h1 class="rubikmono">SKILLS</h1>
             </div>
-            <div class="flex justify-around my-4">
+            <div>
+                <p class="text-xl text-justify pt-2"><?php echo $teks;?></p>
+            </div>
+            <div class="flex justify-around my-3">
                 <a href="<?php echo $htmldocs;?>">
                     <img src="<?php echo $htmlimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
                 </a>
@@ -219,7 +232,7 @@
                     <img src="<?php echo $arduinoimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
                 </a>
             </div>
-            <div class="flex justify-around my-4">
+            <div class="flex justify-around my-3">
                 <a href="<?php echo $firebasedocs;?>">
                     <img src="<?php echo $firebaseimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
                 </a>
@@ -230,7 +243,7 @@
                     <img src="<?php echo $phpimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
                 </a>
             </div>
-            <div class="flex justify-around my-4">
+            <div class="flex justify-around my-3">
                 <a href="<?php echo $cssdocs;?>">
                     <img src="<?php echo $cssimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
                 </a>

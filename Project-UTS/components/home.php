@@ -115,15 +115,15 @@
 
         $conn->close();
     ?>
-    <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika">
-        <div class="flex justify-center items-center w-full">
-            <img src="<?php echo $link; ?>" class="object-cover h-auto w-auto max-w-[500px] aspect-square rounded-full bg-orange-400"/>
+    <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika bg-gray-200">
+        <div class="flex justify-center items-center w-full bg-slate-500 rounded-r-3xl">
+            <img src="<?php echo $link; ?>" class="object-cover h-auto w-auto max-w-[500px] aspect-square rounded-full bg-gray-400"/>
         </div>    
         <div class="flex flex-col pl-10 py-6 justify-center w-full">
             <h1 class="text-5xl">Hi There!</h1>
             <h1 class="text-7xl">I'm <span class="rubik"><?php echo $namaDepan;?></span></h1>
             <div class="py-2">
-                <h3 class="bg-orange-300 px-2 py-1 w-max font-bold"><?php echo $allSkill;?></h3>
+                <h3 class="bg-gray-400 px-2 py-1 w-max font-bold rounded-md"><?php echo $allSkill;?></h3>
             </div>
             <div class="flex gap-4 my-2">
                 <a href="<?php echo $iglink;?>">
@@ -137,7 +137,7 @@
                 </a>
             </div>
             <div class="my-3">
-                <a href="./about.php" class="bg-orange-300 p-2 rounded-lg hover:bg-orange-600 hover:text-black transition duration-400 ease-in-out">More about me</a>
+                <a href="./about.php" class="bg-gray-400 p-2 rounded-lg hover:bg-gray-500 hover:text-black transition duration-400 ease-in-out">More about me</a>
             </div>
         </div>
     </div>

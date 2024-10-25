@@ -24,23 +24,75 @@
             die("Koneksi gagal: " . $conn->connect_error);
         }
 
-        $sql = "SELECT link FROM content WHERE namafoto='orang'";
-        $result = $conn->query($sql);
+        // pp
+        $sql1 = "SELECT link FROM content WHERE namafoto='orang'";
+        $result1 = $conn->query($sql1);
+        // foto
+        $sql2 = "SELECT link FROM content WHERE namafoto='project1'";
+        $result2 = $conn->query($sql2);
+        $sql3 = "SELECT link FROM content WHERE namafoto='project2'";
+        $result3 = $conn->query($sql3);
+        $sql4 = "SELECT link FROM content WHERE namafoto='project3'";
+        $result4 = $conn->query($sql4);
+        $sql5 = "SELECT txt FROM text WHERE nametext='p1'";
+        $result5 = $conn->query($sql5);
+        $sql6 = "SELECT txt FROM text WHERE nametext='p2'";
+        $result6 = $conn->query($sql6);
+        $sql7 = "SELECT txt FROM text WHERE nametext='p3'";
+        $result7 = $conn->query($sql7);
 
+        // pp
         $link = '';
-
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
+        if ($result1->num_rows > 0) {
+            while($row = $result1->fetch_assoc()) {
                 $link = $row["link"];
+            }
+        }
+        // foto
+        $p1img = '';
+        if ($result2->num_rows > 0) {
+            while($row = $result2->fetch_assoc()) {
+                $p1img = $row["link"];
+            }
+        }
+        $p2img = '';
+        if ($result3->num_rows > 0) {
+            while($row = $result3->fetch_assoc()) {
+                $p2img = $row["link"];
+            }
+        }
+        $p3img = '';
+        if ($result4->num_rows > 0) {
+            while($row = $result4->fetch_assoc()) {
+                $p3img = $row["link"];
+            }
+        }
+        // teks
+        $p1txt = '';
+        if ($result5->num_rows > 0) {
+            while($row = $result5->fetch_assoc()) {
+                $p1txt = $row["txt"];
+            }
+        }
+        $p2txt = '';
+        if ($result6->num_rows > 0) {
+            while($row = $result6->fetch_assoc()) {
+                $p2txt = $row["txt"];
+            }
+        }
+        $p3txt = '';
+        if ($result7->num_rows > 0) {
+            while($row = $result7->fetch_assoc()) {
+                $p3txt = $row["txt"];
             }
         }
 
         $conn->close();
     ?>
-    <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika">
-        <div class="flex flex-col basis-1/6 bg-yellow-400">
+    <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika bg-slate-200">
+        <div class="flex flex-col basis-1/6 bg-slate-500 rounded-r-3xl">
             <div class="flex justify-center items-center w-full p-4">
-                <img src="<?php echo $link;?>" class="object-cover h-auto w-auto aspect-square rounded-full outline-dashed bg-orange-400"/>
+                <img src="<?php echo $link;?>" class="object-cover h-auto w-auto aspect-square rounded-full outline-dashed bg-gray-400"/>
             </div>
             <nav class=" h-full flex flex-col justify-center items-center">
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
@@ -52,28 +104,31 @@
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
             </nav>
         </div>
-        <div class="flex flex-col basis-5/6 bg-slate-200 p-7">
+        <div class="flex flex-col basis-5/6 p-7">
             <div class="border-1 border-slate-500 py-2 text-6xl w-full mb-4 text-center">
                 <h1 class="rubikmono">MY PROJECT</h1>
             </div>
-            <div class="mt-2 mb-3">
-                <h2 class="text-2xl text-center font-bold">What I Do?</h2>
-            </div>
-            <div class="flex justify-evenly">
-                <div class="basis-1/3 place-items-center bg-yellow-300 m-2">
-                    <img src="./images/iwak_200.jpeg" class="w-1/3"/>
-                    <h5 class="text-center font-bold pt-1">Web Design</h5>
-                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="flex justify-evenly items-center h-full">
+                <div class="card rounded-b-lg h-max" style="width: 18rem;">
+                    <img src="<?php echo $p1img?>" class="card-img-top rounded-t-lg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title font-bold">Detection System</h5>
+                        <p class="card-text"><?php echo $p1txt?></p>
+                    </div>
                 </div>
-                <div class="basis-1/3 place-items-center bg-yellow-300 m-2">
-                    <img src="./images/iwak_200.jpeg" class="w-1/3"/>
-                    <h5 class="text-center font-bold pt-1">Web Design</h5>
-                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="card rounded-b-lg h-max" style="width: 18rem;">
+                    <img src="<?php echo $p2img?>" class="card-img-top rounded-t-lg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title font-bold">Regrant</h5>
+                        <p class="card-text"><?php echo $p2txt?></p>
+                    </div>
                 </div>
-                <div class="basis-1/3 place-items-center bg-yellow-300 m-2">
-                    <img src="./images/iwak_200.jpeg" class="w-1/3"/>
-                    <h5 class="text-center font-bold pt-1">Web Design</h5>
-                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="card rounded-b-lg h-max" style="width: 18rem;">
+                    <img src="<?php echo $p3img?>" class="card-img-top rounded-t-lg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title font-bold">Water Wise</h5>
+                        <p class="card-text"><?php echo $p3txt?></p>
+                    </div>
                 </div>
             </div>
         </div>
