@@ -36,8 +36,6 @@
             while($row = $result1->fetch_assoc()) {
                 $link = $row["link"];
             }
-        } else {
-            $link = "default.jpg";
         }
 
         $namaDepan = '';
@@ -45,8 +43,6 @@
             while($row = $result2->fetch_assoc()) {
                 $namaDepan = $row["namadepan"];
             }
-        } else {
-            $namaDepan = "default.jpg";
         }
 
         $namaSkill = [];
@@ -54,18 +50,16 @@
             while($row = $result3->fetch_assoc()) {
                 $namaSkill [] = $row["skillname"];
             }
-        } else {
-            $namaSkill = "default.jpg";
         }
         $allSkill = !empty($namaSkill) ? implode(', ', $namaSkill) : "default skill"; 
 
         $conn->close();
     ?>
-    <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika">
+    <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika bg-slate-200 p-4">
         <div class="basis-2/5">
-            <img src="<?php echo $link; ?>" class="h-full w-full"/>
+            <img src="<?php echo $link; ?>" class="h-full w-full border-none outline-none"/>
         </div>
-        <div class="basis-3/5 bg-slate-200 px-5 py-6 content-center">
+        <div class="basis-3/5 px-5 py-6 content-center">
             <h1 class="text-5xl">Hi There!</h1>
             <h1 class="text-7xl">I'm <span class="rubik"><?php echo $namaDepan;?></span></h1>
             <div class="py-2">

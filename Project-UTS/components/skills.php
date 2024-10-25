@@ -33,8 +33,6 @@
             while($row = $result->fetch_assoc()) {
                 $link = $row["link"];
             }
-        } else {
-            $link = "default.jpg";
         }
 
         $conn->close();

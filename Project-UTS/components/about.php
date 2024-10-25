@@ -48,77 +48,63 @@
             while($row = $result1->fetch_assoc()) {
                 $link1 = $row["link"];
             }
-        } else {
-            $link1 = "default.jpg";
-        }
+        } 
 
         $link2 = '';
         if ($result3->num_rows > 0) {
             while($row = $result3->fetch_assoc()) {
                 $link2 = $row["link"];
             }
-        } else {
-            $link2 = "default.jpg";
-        }
+        } 
+
         $link3 = '';
         if ($result4->num_rows > 0) {
             while($row = $result4->fetch_assoc()) {
                 $link3 = $row["link"];
             }
-        } else {
-            $link3 = "default.jpg";
-        }
+        } 
+        
         $link4 = '';
         if ($result5->num_rows > 0) {
             while($row = $result5->fetch_assoc()) {
                 $link4 = $row["link"];
             }
-        } else {
-            $link4 = "default.jpg";
-        }
+        } 
 
         $skill1 = '';
         if ($result6->num_rows > 0) {
             while($row = $result6->fetch_assoc()) {
                 $skill1 = $row["skillname"];
             }
-        } else {
-            $link = "default.jpg";
-        }
+        } 
+
         $skill2 = '';
         if ($result7->num_rows > 0) {
             while($row = $result7->fetch_assoc()) {
                 $skill2 = $row["skillname"];
             }
-        } else {
-            $link = "default.jpg";
-        }
+        } 
+        
         $skill3 = '';
         if ($result8->num_rows > 0) {
             while($row = $result8->fetch_assoc()) {
                 $skill3 = $row["skillname"];
             }
-        } else {
-            $link = "default.jpg";
-        }
+        } 
 
         $teks = '';
         if ($result2->num_rows > 0) {
             while($row = $result2->fetch_assoc()) {
                 $teks = $row["txt"];
             }
-        } else {
-            $link = "default.jpg";
-        }
+        } 
 
         $nama = '';
         if ($result9->num_rows > 0) {
             while($row = $result9->fetch_assoc()) {
                 $nama = $row["nama_lengkap"];
             }
-        } else {
-            $link = "default.jpg";
-        }
+        } 
 
         $conn->close();
     ?>
