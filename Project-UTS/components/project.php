@@ -109,22 +109,22 @@
                 <h1 class="rubikmono">MY PROJECT</h1>
             </div>
             <div class="flex justify-evenly items-center h-full">
-                <div class="card rounded-b-lg h-max" style="width: 18rem;">
-                    <img src="<?php echo $p1img?>" class="card-img-top rounded-t-lg" alt="...">
-                    <div class="card-body">
+                <div class="card rounded-lg h-full" style="width: 18rem;">
+                    <img src="<?php echo $p1img?>" class="card-img-top max-h-[190px] rounded-t-lg bg-black">
+                    <div class="card-body rounded-2xl">
                         <h5 class="card-title font-bold">Detection System</h5>
                         <p class="card-text"><?php echo $p1txt?></p>
                     </div>
                 </div>
-                <div class="card rounded-b-lg h-max" style="width: 18rem;">
-                    <img src="<?php echo $p2img?>" class="card-img-top rounded-t-lg" alt="...">
+                <div class="card rounded-lg h-full" style="width: 18rem;">
+                    <img src="<?php echo $p2img?>" class="card-img-top max-h-[190px] rounded-t-lg bg-black p-4">
                     <div class="card-body">
                         <h5 class="card-title font-bold">Regrant</h5>
                         <p class="card-text"><?php echo $p2txt?></p>
                     </div>
                 </div>
-                <div class="card rounded-b-lg h-max" style="width: 18rem;">
-                    <img src="<?php echo $p3img?>" class="card-img-top rounded-t-lg" alt="...">
+                <div class="card rounded-lg h-full" style="width: 18rem;">
+                    <img src="<?php echo $p3img?>" class="card-img-top max-h-[190px] rounded-t-lg bg-black p-4">
                     <div class="card-body">
                         <h5 class="card-title font-bold">Water Wise</h5>
                         <p class="card-text"><?php echo $p3txt?></p>
