@@ -24,81 +24,83 @@
             die("Koneksi gagal: " . $conn->connect_error);
         }
 
+        // pp
         $sql1 = "SELECT link FROM content WHERE namafoto='orang'";
         $result1 = $conn->query($sql1);
+        // teks
         $sql2 = "SELECT txt FROM text WHERE nametext='about'";
         $result2 = $conn->query($sql2);
+        // image
         $sql3 = "SELECT link FROM content WHERE namafoto='webimg'";
         $result3 = $conn->query($sql3);
         $sql4 = "SELECT link FROM content WHERE namafoto='dbimg'";
         $result4 = $conn->query($sql4);
         $sql5 = "SELECT link FROM content WHERE namafoto='iotimg'";
         $result5 = $conn->query($sql5);
+        // skill
         $sql6 = "SELECT skillname FROM skill WHERE id=4";
         $result6 = $conn->query($sql6);
         $sql7 = "SELECT skillname FROM skill WHERE id=5";
         $result7 = $conn->query($sql7);
         $sql8 = "SELECT skillname FROM skill WHERE id=6";
         $result8 = $conn->query($sql8);
+        // nama
         $sql9 = "SELECT CONCAT(namadepan, ' ', namabelakang) AS nama_lengkap FROM biodata WHERE id=1";
         $result9 = $conn->query($sql9);
 
+        // pp
         $link1 = '';
         if ($result1->num_rows > 0) {
             while($row = $result1->fetch_assoc()) {
                 $link1 = $row["link"];
             }
-        } 
-
-        $link2 = '';
-        if ($result3->num_rows > 0) {
-            while($row = $result3->fetch_assoc()) {
-                $link2 = $row["link"];
-            }
-        } 
-
-        $link3 = '';
-        if ($result4->num_rows > 0) {
-            while($row = $result4->fetch_assoc()) {
-                $link3 = $row["link"];
-            }
-        } 
-        
-        $link4 = '';
-        if ($result5->num_rows > 0) {
-            while($row = $result5->fetch_assoc()) {
-                $link4 = $row["link"];
-            }
-        } 
-
-        $skill1 = '';
-        if ($result6->num_rows > 0) {
-            while($row = $result6->fetch_assoc()) {
-                $skill1 = $row["skillname"];
-            }
-        } 
-
-        $skill2 = '';
-        if ($result7->num_rows > 0) {
-            while($row = $result7->fetch_assoc()) {
-                $skill2 = $row["skillname"];
-            }
-        } 
-        
-        $skill3 = '';
-        if ($result8->num_rows > 0) {
-            while($row = $result8->fetch_assoc()) {
-                $skill3 = $row["skillname"];
-            }
-        } 
-
+        }
+        // teks
         $teks = '';
         if ($result2->num_rows > 0) {
             while($row = $result2->fetch_assoc()) {
                 $teks = $row["txt"];
             }
         } 
-
+        // image
+        $link2 = '';
+        if ($result3->num_rows > 0) {
+            while($row = $result3->fetch_assoc()) {
+                $link2 = $row["link"];
+            }
+        } 
+        $link3 = '';
+        if ($result4->num_rows > 0) {
+            while($row = $result4->fetch_assoc()) {
+                $link3 = $row["link"];
+            }
+        } 
+        $link4 = '';
+        if ($result5->num_rows > 0) {
+            while($row = $result5->fetch_assoc()) {
+                $link4 = $row["link"];
+            }
+        } 
+        // skill
+        $skill1 = '';
+        if ($result6->num_rows > 0) {
+            while($row = $result6->fetch_assoc()) {
+                $skill1 = $row["skillname"];
+            }
+        } 
+        $skill2 = '';
+        if ($result7->num_rows > 0) {
+            while($row = $result7->fetch_assoc()) {
+                $skill2 = $row["skillname"];
+            }
+        } 
+        $skill3 = '';
+        if ($result8->num_rows > 0) {
+            while($row = $result8->fetch_assoc()) {
+                $skill3 = $row["skillname"];
+            }
+        } 
+        // nama
         $nama = '';
         if ($result9->num_rows > 0) {
             while($row = $result9->fetch_assoc()) {
