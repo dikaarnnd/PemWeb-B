@@ -24,7 +24,7 @@
             die("Koneksi gagal: " . $conn->connect_error);
         }
 
-        $sql1 = "SELECT link FROM content WHERE namafoto='arduino'";
+        $sql1 = "SELECT link FROM content WHERE namafoto='orang'";
         $result1 = $conn->query($sql1);
         $sql2 = "SELECT namadepan FROM biodata WHERE id=1";
         $result2 = $conn->query($sql2);
@@ -55,18 +55,25 @@
 
         $conn->close();
     ?>
-    <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika bg-slate-200 p-4">
-        <div class="basis-2/5">
-            <img src="<?php echo $link; ?>" class="h-full w-full border-none outline-none"/>
-        </div>
-        <div class="basis-3/5 px-5 py-6 content-center">
+    <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika">
+        <div class="flex justify-center items-center w-full">
+            <img src="<?php echo $link; ?>" class="object-cover h-auto w-auto max-w-[500px] aspect-square rounded-full bg-orange-400"/>
+        </div>    
+        <div class="pl-10 py-6 content-center w-full">
             <h1 class="text-5xl">Hi There!</h1>
             <h1 class="text-7xl">I'm <span class="rubik"><?php echo $namaDepan;?></span></h1>
             <div class="py-2">
                 <h3 class="bg-orange-400 px-2 py-1 w-max font-bold"><?php echo $allSkill;?></h3>
             </div>
+            <div>
+                <div>
+                    <a href="" class="border border-orange-300 rounded-full"></a>
+                </div>
+                <div></div>
+                <div></div>
+            </div>
             <div class="my-3">
-                <a href="./about.php" class="bg-orange-300 p-2 rounded-lg hover:bg-orange-500 hover:text-black transition duration-400 ease-in-out">More about me</a>
+                <a href="./about.php" class="bg-orange-400 p-2 rounded-lg hover:bg-orange-600 hover:text-black transition duration-400 ease-in-out">More about me</a>
             </div>
         </div>
     </div>

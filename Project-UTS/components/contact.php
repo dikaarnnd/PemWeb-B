@@ -38,11 +38,11 @@
         $conn->close();
     ?>
     <div class="flex min-[320px]:flex-col max-[768px]:flex-col min-[769px]:flex-row h-screen signika">
-        <div class="flex flex-col basis-1/6">
-            <div class="">
-                <img src="<?php echo $link;?>" class="w-full"/>
+        <div class="flex flex-col basis-1/6 bg-yellow-400">
+            <div class="flex justify-center items-center w-full p-4">
+                <img src="<?php echo $link;?>" class="object-cover h-auto w-auto aspect-square rounded-full outline-dashed bg-orange-400"/>
             </div>
-            <nav class="bg-yellow-400 text-white h-full flex flex-col justify-center items-center">
+            <nav class=" h-full flex flex-col justify-center items-center">
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
                 <a href="./home.php" class="mb-3 text-black font-bold hover:text-white">HOME</a>
                 <a href="./about.php" class="mb-3 text-black font-bold hover:text-white">ABOUT ME</a>
