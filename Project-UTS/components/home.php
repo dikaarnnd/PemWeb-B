@@ -30,6 +30,8 @@
         $result2 = $conn->query($sql2);
         $sql3 = "SELECT skillname FROM skill LIMIT 3";
         $result3 = $conn->query($sql3);
+        $sql4 = "SELECT link FROM content WHERE namafoto='ig'";
+        $result4 = $conn->query($sql4);
 
         $link = '';
         if ($result1->num_rows > 0) {
@@ -51,7 +53,14 @@
                 $namaSkill [] = $row["skillname"];
             }
         }
-        $allSkill = !empty($namaSkill) ? implode(', ', $namaSkill) : "default skill"; 
+        $allSkill = !empty($namaSkill) ? implode(', ', $namaSkill) : "default skill";
+
+        $igimg = '';
+        if ($result4->num_rows > 0) {
+            while($row = $result4->fetch_assoc()) {
+                $igimg = $row["link"];
+            }
+        }
 
         $conn->close();
     ?>
@@ -67,7 +76,8 @@
             </div>
             <div>
                 <div>
-                    <a href="" class="border border-orange-300 rounded-full"></a>
+                    <a href=""></a>
+                    <img src="<?php echo $igimg;?>" class="object-cover h-auto w-auto max-w-[30px] mt-2"/>
                 </div>
                 <div></div>
                 <div></div>
