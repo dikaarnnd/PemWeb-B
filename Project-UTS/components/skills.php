@@ -205,12 +205,9 @@
             <div class="border-1 border-slate-500 py-2 text-6xl w-full mb-4 text-center">
                 <h1 class="rubikmono">SKILLS</h1>
             </div>
-            <div class="flex justify-around my-5">
+            <div class="flex justify-around my-4">
                 <a href="<?php echo $htmldocs;?>">
                     <img src="<?php echo $htmlimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
-                </a>
-                <a href="<?php echo $cssdocs;?>">
-                    <img src="<?php echo $cssimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
                 </a>
                 <a href="<?php echo $jsdocs;?>">
                     <img src="<?php echo $jsimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
@@ -222,7 +219,7 @@
                     <img src="<?php echo $arduinoimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
                 </a>
             </div>
-            <div class="flex justify-around my-5">
+            <div class="flex justify-around my-4">
                 <a href="<?php echo $firebasedocs;?>">
                     <img src="<?php echo $firebaseimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
                 </a>
@@ -231,6 +228,14 @@
                 </a>
                 <a href="<?php echo $phpdocs;?>">
                     <img src="<?php echo $phpimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
+                </a>
+            </div>
+            <div class="flex justify-around my-4">
+                <a href="<?php echo $cssdocs;?>">
+                    <img src="<?php echo $cssimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
+                </a>
+                <a href="<?php echo $tailwinddocs;?>">
+                    <img src="<?php echo $tailwindimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
                 </a>
             </div>
         </div>
