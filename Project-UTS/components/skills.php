@@ -47,22 +47,24 @@
         $sql10 = "SELECT link FROM content WHERE namafoto='tailwind'";
         $result10 = $conn->query($sql10);
         // docs
-        $sql11 = "SELECT link FROM content WHERE namafoto='tailwind'";
+        $sql11 = "SELECT link FROM content WHERE namafoto='html'";
         $result11 = $conn->query($sql11);
-        $sql12 = "SELECT link FROM lang WHERE namabhs='html'";
+        $sql12 = "SELECT link FROM lang WHERE namabhs='css'";
         $result12 = $conn->query($sql12);
-        $sql13 = "SELECT link FROM lang WHERE namabhs='css'";
+        $sql13 = "SELECT link FROM lang WHERE namabhs='php'";
         $result13 = $conn->query($sql13);
-        $sql14 = "SELECT link FROM lang WHERE namabhs='php'";
+        $sql14 = "SELECT link FROM lang WHERE namabhs='js'";
         $result14 = $conn->query($sql14);
-        $sql15 = "SELECT link FROM lang WHERE namabhs='js'";
+        $sql15 = "SELECT link FROM lang WHERE namabhs='react'";
         $result15 = $conn->query($sql15);
-        $sql16 = "SELECT link FROM lang WHERE namabhs='react'";
+        $sql16 = "SELECT link FROM lang WHERE namabhs='arduino'";
         $result16 = $conn->query($sql16);
-        $sql17 = "SELECT link FROM lang WHERE namabhs='nodejs'";
+        $sql17 = "SELECT link FROM lang WHERE namabhs='firebase'";
         $result17 = $conn->query($sql17);
-        $sql18 = "SELECT link FROM lang WHERE namabhs='firebase'";
+        $sql18 = "SELECT link FROM lang WHERE namabhs='nodejs'";
         $result18 = $conn->query($sql18);
+        $sql19 = "SELECT link FROM lang WHERE namabhs='tailwind'";
+        $result19 = $conn->query($sql19);
 
         // foto
         $foto = '';
@@ -96,29 +98,89 @@
                 $jsimg = $row["link"];
             }
         }
+        $reactimg = '';
+        if ($result6->num_rows > 0) {
+            while($row = $result6->fetch_assoc()) {
+                $reactimg = $row["link"];
+            }
+        }
+        $arduinoimg = '';
+        if ($result7->num_rows > 0) {
+            while($row = $result7->fetch_assoc()) {
+                $arduinoimg = $row["link"];
+            }
+        }
+        $firebaseimg = '';
+        if ($result8->num_rows > 0) {
+            while($row = $result8->fetch_assoc()) {
+                $firebaseimg = $row["link"];
+            }
+        }
+        $nodejsimg = '';
+        if ($result9->num_rows > 0) {
+            while($row = $result9->fetch_assoc()) {
+                $nodejsimg = $row["link"];
+            }
+        }
+        $tailwindimg = '';
+        if ($result10->num_rows > 0) {
+            while($row = $result10->fetch_assoc()) {
+                $tailwindimg = $row["link"];
+            }
+        }
         // docs
         $htmldocs = '';
-        if ($result12->num_rows > 0) {
-            while($row = $result12->fetch_assoc()) {
+        if ($result11->num_rows > 0) {
+            while($row = $result11->fetch_assoc()) {
                 $htmldocs = $row["link"];
             }
         }
         $cssdocs = '';
-        if ($result13->num_rows > 0) {
-            while($row = $result13->fetch_assoc()) {
+        if ($result12->num_rows > 0) {
+            while($row = $result12->fetch_assoc()) {
                 $cssdocs = $row["link"];
             }
         }
         $phpdocs = '';
-        if ($result14->num_rows > 0) {
-            while($row = $result14->fetch_assoc()) {
+        if ($result13->num_rows > 0) {
+            while($row = $result13->fetch_assoc()) {
                 $phpdocs = $row["link"];
             }
         }
         $jsdocs = '';
-        if ($result15->num_rows > 0) {
+        if ($result14->num_rows > 0) {
             while($row = $result14->fetch_assoc()) {
                 $jsdocs = $row["link"];
+            }
+        }
+        $reactdocs = '';
+        if ($result15->num_rows > 0) {
+            while($row = $result15->fetch_assoc()) {
+                $reactdocs = $row["link"];
+            }
+        }
+        $arduinodocs = '';
+        if ($result16->num_rows > 0) {
+            while($row = $result16->fetch_assoc()) {
+                $arduinodocs = $row["link"];
+            }
+        }
+        $firebasedocs = '';
+        if ($result17->num_rows > 0) {
+            while($row = $result17->fetch_assoc()) {
+                $firebasedocs = $row["link"];
+            }
+        }
+        $nodejsdocs = '';
+        if ($result18->num_rows > 0) {
+            while($row = $result18->fetch_assoc()) {
+                $nodejsdocs = $row["link"];
+            }
+        }
+        $tailwinddocs = '';
+        if ($result19->num_rows > 0) {
+            while($row = $result19->fetch_assoc()) {
+                $tailwinddocs = $row["link"];
             }
         }
 
@@ -143,7 +205,7 @@
             <div class="border-1 border-slate-500 py-2 text-6xl w-full mb-4 text-center">
                 <h1 class="rubikmono">SKILLS</h1>
             </div>
-            <div class="flex justify-around">
+            <div class="flex justify-around my-5">
                 <a href="<?php echo $htmldocs;?>">
                     <img src="<?php echo $htmlimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
                 </a>
@@ -152,6 +214,20 @@
                 </a>
                 <a href="<?php echo $jsdocs;?>">
                     <img src="<?php echo $jsimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
+                </a>
+                <a href="<?php echo $reactdocs;?>">
+                    <img src="<?php echo $reactimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
+                </a>
+                <a href="<?php echo $arduinodocs;?>">
+                    <img src="<?php echo $arduinoimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
+                </a>
+            </div>
+            <div class="flex justify-around my-5">
+                <a href="<?php echo $firebasedocs;?>">
+                    <img src="<?php echo $firebaseimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
+                </a>
+                <a href="<?php echo $nodejsdocs;?>">
+                    <img src="<?php echo $nodejsimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
                 </a>
                 <a href="<?php echo $phpdocs;?>">
                     <img src="<?php echo $phpimg;?>" class="object-cover h-auto w-auto max-w-[80px] mt-2"/>
