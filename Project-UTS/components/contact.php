@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../style/font.css">
+    <link rel="stylesheet" href="../style/output.css">
     <!-- Bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- tailwind cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Contact</title>
 </head>
 <body>
@@ -97,17 +96,17 @@
             </div>
             <nav class=" h-full flex flex-col justify-center items-center">
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
-                <a href="./home.php" class="mb-3 text-black font-bold hover:text-white">HOME</a>
-                <a href="./about.php" class="mb-3 text-black font-bold hover:text-white">ABOUT ME</a>
-                <a href="./skills.php" class="mb-3 text-black font-bold hover:text-white">SKILL</a>
-                <a href="./project.php" class="mb-3 text-black font-bold hover:text-white">MY PROJECT</a>
-                <a href="./contact.php" class="mb-3 text-white font-bold hover:text-white">CONTACT</a>
+                <a href="./home.php" class="no-underline mb-3 text-black font-bold hover:text-white">HOME</a>
+                <a href="./about.php" class="no-underline mb-3 text-black font-bold hover:text-white">ABOUT ME</a>
+                <a href="./skills.php" class="no-underline mb-3 text-black font-bold hover:text-white">SKILL</a>
+                <a href="./project.php" class="no-underline mb-3 text-black font-bold hover:text-white">MY PROJECT</a>
+                <a href="./contact.php" class="no-underline mb-3 text-white font-bold hover:text-white">CONTACT</a>
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
             </nav>
         </div>
         <div class="flex flex-col basis-5/6 p-7">
             <div class="border-1 border-slate-500 py-2 text-6xl w-full mb-4 text-center">
-                <h1 class="rubikmono">CONTACT ME</h1>
+                <h1 class="rubikmono m-0">CONTACT ME</h1>
             </div>
             <div class="mt-2 mb-3">
                 <h1 class="text-2xl font-bold"><?php echo $txt1;?></h1>
@@ -116,11 +115,11 @@
             <div class="flex flex-col ml-2">
                 <div class="flex gap-3">
                     <img src="<?php echo $gmailimg;?>" class="object-cover h-auto w-auto max-w-[40px]"/>
-                    <p class="text-md content-center"><?php echo $txt4;?></p>
+                    <p class="text-md content-center m-0"><?php echo $txt4;?></p>
                 </div>
                 <div class="flex mt-3 gap-3">
                     <img src="<?php echo $waimg;?>" class="object-cover h-auto w-auto max-w-[40px]"/>
-                    <p class="text-md content-center"><?php echo $txt3;?></p>
+                    <p class="text-md content-center m-0"><?php echo $txt3;?></p>
                 </div>
             </div>
             <div class="flex items-center my-3">
@@ -141,9 +140,13 @@
                     <label for="desc">Description:</label>
                     <textarea type="desc" class="form-control" id="desc" placeholder="Description" name="desc" required></textarea>
                 </div>
-                <div>
-                    <button type="submit" class="btn bg-slate-500 hover:bg-slate-600 text-white" name="btnSubmit">Submit</button>
-                    <button type="reset" class="btn bg-slate-500 hover:bg-slate-600 text-white mx-2" name="btnCancel ">Cancel</button>
+                <div class="flex gap-2">
+                    <div class="border border-1 rounded-lg bg-slate-500 hover:bg-slate-600 w-max p-2">
+                        <button type="submit" class=" text-white" name="btnSubmit">Submit</button>
+                    </div>
+                    <div class="border border-1 rounded-lg bg-slate-500 hover:bg-slate-600 w-max p-2">
+                        <button type="reset" class="text-white" name="btnCancel ">Cancel</button>
+                    </div>
                 </div>
             </form>
         </div>

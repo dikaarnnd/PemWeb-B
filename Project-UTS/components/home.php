@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../style/font.css">
+    <link rel="stylesheet" href="../style/output.css">
     <!-- Bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- tailwind cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Home</title>
 </head>
 <body>
@@ -123,21 +122,21 @@
             <h1 class="text-5xl">Hi There!</h1>
             <h1 class="text-7xl">I'm <span class="rubik"><?php echo $namaDepan;?></span></h1>
             <div class="py-2">
-                <h3 class="bg-gray-400 px-2 py-1 w-max font-bold rounded-md"><?php echo $allSkill;?></h3>
+                <p class="bg-gray-400 px-2 py-1 w-max font-bold rounded-md m-0"><?php echo $allSkill;?></p>
             </div>
             <div class="flex gap-4 my-2">
                 <a href="<?php echo $iglink;?>">
-                    <img src="<?php echo $igimg;?>" class="object-cover h-auto w-auto max-w-[30px] mt-2"/>
+                    <img src="<?php echo $igimg;?>" class="object-cover h-auto w-auto max-w-[30px] my-1"/>
                 </a>
                 <a href="<?php echo $linkedinlink;?>">
-                    <img src="<?php echo $linkedinimg;?>" class="object-cover h-auto w-auto max-w-[30px] mt-2"/>
+                    <img src="<?php echo $linkedinimg;?>" class="object-cover h-auto w-auto max-w-[30px] my-1"/>
                 </a>
                 <a href="<?php echo $githublink;?>">
-                    <img src="<?php echo $githubimg;?>" class="object-cover h-auto w-auto max-w-[30px] mt-2"/>
+                    <img src="<?php echo $githubimg;?>" class="object-cover h-auto w-auto max-w-[30px] my-1"/>
                 </a>
             </div>
             <div class="my-3">
-                <a href="./about.php" class="bg-gray-500 p-2 rounded-lg hover:bg-gray-600 text-gray-200 hover:text-gray-200 transition duration-400 ease-in-out">More about me</a>
+                <a href="./about.php" class="bg-gray-500 p-2 rounded-lg hover:bg-gray-600 text-gray-200 hover:text-gray-200 transition duration-400 ease-in-out no-underline">More about me</a>
             </div>
         </div>
     </div>

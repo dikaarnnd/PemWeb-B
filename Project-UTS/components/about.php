@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../style/font.css">
+    <link rel="stylesheet" href="../style/output.css">
+    <link rel="stylesheet" href="../style/style.css">
     <!-- Bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- tailwind cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>About Me</title>
 </head>
 <body>
@@ -117,17 +117,17 @@
             </div>
             <nav class=" h-full flex flex-col justify-center items-center">
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
-                <a href="./home.php" class="mb-3 text-black font-bold hover:text-white">HOME</a>
-                <a href="./about.php" class="mb-3 text-white font-bold hover:text-white">ABOUT ME</a>
-                <a href="./skills.php" class="mb-3 text-black font-bold hover:text-white">SKILL</a>
-                <a href="./project.php" class="mb-3 text-black font-bold hover:text-white">MY PROJECT</a>
-                <a href="./contact.php" class="mb-3 text-black font-bold hover:text-white">CONTACT</a>
+                <a href="./home.php" class="no-underline mb-3 text-black font-bold hover:text-white">HOME</a>
+                <a href="./about.php" class="no-underline mb-3 text-white font-bold hover:text-white">ABOUT ME</a>
+                <a href="./skills.php" class="no-underline mb-3 text-black font-bold hover:text-white">SKILL</a>
+                <a href="./project.php" class="no-underline mb-3 text-black font-bold hover:text-white">MY PROJECT</a>
+                <a href="./contact.php" class="no-underline mb-3 text-black font-bold hover:text-white">CONTACT</a>
                 <div class="w-1 h-1 rounded-full bg-black my-8"></div>
             </nav>
         </div>
         <div class="flex flex-col basis-5/6 p-7">
             <div class="border-1 border-slate-500 py-2 text-6xl w-full mb-4 text-center">
-                <h1 class="rubikmono">ABOUT ME</h1>
+                <h1 class="rubikmono justify-center m-0">ABOUT ME</h1>
             </div>
             <div class="mb-4">
                 <h2 class="text-4xl text-left pt-1">I'm <span class=" font-bold"><?php echo $nama?>.</span></h2>
