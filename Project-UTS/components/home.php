@@ -137,7 +137,7 @@
                 </a>
             </div>
             <div class="my-3">
-                <a href="./about.php" class="bg-gray-400 p-2 rounded-lg hover:bg-gray-500 hover:text-black transition duration-400 ease-in-out">More about me</a>
+                <a href="./about.php" class="bg-gray-500 p-2 rounded-lg hover:bg-gray-600 text-gray-200 hover:text-gray-200 transition duration-400 ease-in-out">More about me</a>
             </div>
         </div>
     </div>
