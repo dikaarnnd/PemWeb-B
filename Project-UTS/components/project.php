@@ -33,6 +33,7 @@
         $result3 = $conn->query($sql3);
         $sql4 = "SELECT link FROM content WHERE namafoto='project3'";
         $result4 = $conn->query($sql4);
+        // teks
         $sql5 = "SELECT txt FROM text WHERE nametext='p1'";
         $result5 = $conn->query($sql5);
         $sql6 = "SELECT txt FROM text WHERE nametext='p2'";
