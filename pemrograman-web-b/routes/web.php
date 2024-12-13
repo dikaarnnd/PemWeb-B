@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Route;
 // controller
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\HalamanController;
+use App\Http\Controllers\BiodataController;
+
+// CRUD
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -49,3 +53,6 @@ Route::get('/new/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/baru/home', [HalamanController::class, 'home'])->name('topmenu1');
 Route::get('/baru/about', [HalamanController::class, 'about'])->name('topmenu2');
 Route::get('/baru/contact', [HalamanController::class, 'contact'])->name('topmenu3');
+
+// CRUD
+Route::resource('biodatas', BiodataController::class);
